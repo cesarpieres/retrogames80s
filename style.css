@@ -1,69 +1,81 @@
-body {
-  background: black;
-  color: lime;
-  font-family: monospace;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
+body, html {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: lime;
+    font-family: monospace;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    touch-action: manipulation;
 }
 
-#loading {
-  font-size: 24px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: lime;
-  background: black;
-  z-index: 9999;
+h1 {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: lime;
+    font-size: 2rem;
 }
 
-#rotate-message {
-  display: none;
-  background: #000;
-  color: yellow;
-  font-size: 20px;
-  padding: 20px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+.game-container {
+    border: 2px solid lime;
+    width: 100vw;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: #111;
+    position: relative;
+    overflow: hidden;
 }
 
-#touch-controls {
-  display: none;
-  margin-top: 20px;
-}
-
-.touch-row {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-}
-
-.touch-btn {
-  background: #222;
-  color: lime;
-  border: 1px solid lime;
-  padding: 15px;
-  font-size: 24px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-canvas {
-  margin-top: 20px;
-  background: #111;
-  border: 2px solid lime;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  #touch-controls {
+#gameCanvas {
+    width: 100%;
+    height: 100%;
     display: block;
-  }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+button {
+    background-color: #000;
+    color: lime;
+    border: 2px solid lime;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: lime;
+    color: black;
+}
+
+#info {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.touch-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+.touch-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }
