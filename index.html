@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frogger - PIERES80s</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+  <div id="loading">LOADING...</div>
+
+  <div id="rotate-message">📲 Girá el teléfono para jugar mejor 🚀</div>
+
+  <h1>🐸 Frogger</h1>
+  <p class="sub">⚡ PIERES POWERED!!! ⚡</p>
+
+  <button id="insertButton">🎟️ Insertar Ficha</button>
+  <button id="resetButton" style="display:none;">🔄 Reiniciar</button>
+  <p id="vidas">Vidas: 0</p>
+  <p id="nivel">Nivel: 1</p>
+  <div id="game"></div>
+
+  <!-- Controles touch -->
+  <div id="touch-controls">
+    <div class="touch-row">
+      <button class="touch-btn" data-dir="up">⬆️</button>
+    </div>
+    <div class="touch-row">
+      <button class="touch-btn" data-dir="left">⬅️</button>
+      <button class="touch-btn" data-dir="down">⬇️</button>
+      <button class="touch-btn" data-dir="right">➡️</button>
+    </div>
+  </div>
+
+  <footer>🎉 Una creación de César Pieres 🎮</footer>
+
+  <script src="frogger.js"></script>
+</body>
+</html>
