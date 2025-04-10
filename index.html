@@ -2,39 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Frogger - PIERES80s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Frogger - PIERES POWERED</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="frogger.js" defer></script>
 </head>
 <body>
-
-  <div id="loading">LOADING...</div>
-
-  <div id="rotate-message">📲 Girá el teléfono para jugar mejor 🚀</div>
-
-  <h1>🐸 Frogger</h1>
-  <p class="sub">⚡ PIERES POWERED!!! ⚡</p>
-
-  <button id="insertButton">🎟️ Insertar Ficha</button>
-  <button id="resetButton" style="display:none;">🔄 Reiniciar</button>
-  <p id="vidas">Vidas: 0</p>
-  <p id="nivel">Nivel: 1</p>
-  <div id="game"></div>
-
-  <!-- Controles touch -->
-  <div id="touch-controls">
-    <div class="touch-row">
-      <button class="touch-btn" data-dir="up">⬆️</button>
+  <div class="top-bar">
+    <h1>🐸 Frogger</h1>
+    <div class="sub">⚡ PIERES POWERED!!! ⚡</div>
+    <div class="buttons">
+      <button onclick="insertCoin()">🪙 Insertar Ficha</button>
+      <button onclick="restartGame()">🔁 Reiniciar</button>
     </div>
-    <div class="touch-row">
-      <button class="touch-btn" data-dir="left">⬅️</button>
-      <button class="touch-btn" data-dir="down">⬇️</button>
-      <button class="touch-btn" data-dir="right">➡️</button>
+    <div id="hud">
+      <p>Vidas: <span id="vidas">5</span></p>
+      <p>Nivel: <span id="nivel">1</span></p>
     </div>
   </div>
 
-  <footer>🎉 Una creación de César Pieres 🎮</footer>
+  <canvas id="gameCanvas"></canvas>
 
-  <script src="frogger.js"></script>
+  <div class="mobile-controls">
+    <button class="up" onclick="move('up')">⬆️</button>
+    <div class="horizontal">
+      <button onclick="move('left')">⬅️</button>
+      <button onclick="move('right')">➡️</button>
+    </div>
+    <button class="down" onclick="move('down')">⬇️</button>
+  </div>
+
+  <footer>
+    🕹️ Una creación de <strong>César Pieres</strong> 🎮
+  </footer>
 </body>
 </html>
