@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frogger - PIERES POWERED</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="frogger.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beltrán Buggy Run</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="game-container">
-    <canvas id="gameCanvas" width="672" height="768"></canvas>
-    <div class="hud">
-      <button onclick="startGame()">Insertar Ficha</button>
-      <button onclick="resetGame()">Reiniciar</button>
-      <p id="vidas">Vidas: 5</p>
-      <p id="nivel">Nivel: 1</p>
+    <div class="container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <div class="pause-button">
+                <button id="pauseBtn">Pausa</button>
+            </div>
+            <div class="mobile-controls">
+                <button id="upBtn">↑</button>
+                <div class="horizontal-buttons">
+                    <button id="leftBtn">←</button>
+                    <button id="rightBtn">→</button>
+                </div>
+                <button id="downBtn">↓</button>
+            </div>
+            <div class="lives">
+                Vidas: <span id="livesCount"></span>
+            </div>
+        </div>
     </div>
-  </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
