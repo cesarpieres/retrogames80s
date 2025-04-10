@@ -200,3 +200,6 @@ document.addEventListener("keydown", e => {
   frog.x = Math.max(0, Math.min(gridWidth - 1, frog.x));
   frog.y = Math.max(0, Math.min(gridHeight - 1, frog.y));
 });
+window.onload = () => {
+  startGame();
+};
